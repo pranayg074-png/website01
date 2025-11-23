@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+}
+
+nav {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 0.8rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+    transform: scale(1.1);
+}
+
+section {
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.photo {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.photo img {
+    width: 35vw;
+    max-width: 150px;
+    height: 35vw;
+    max-height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.skills-grid .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.grid-item {
+    padding: 0.8rem;
+    background: #f2f2f2;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.level {
+    background: #d9ffd9;
+}
+
+.project-item {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+    background-color: #e5faff;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 600px) {
+    section {
+        margin: 2rem auto;
+        width: 85%;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 900px) {
+    nav {
+        gap: 2rem;
+    }
+
+    section {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Pranay Garg</h1>
+<p class="subtitle">Student | Web Developer</p>
+
+<nav>
+ <a href="#about">About</a>
+ <a href="#skills">Skills</a>
+ <a href="#projects">Projects</a>
+ <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="photo">
+ <img src="profile.jpg" alt="my photo">
+</div>
+<p>Hi I am Pranay. I am studying Btech CSE. I like coding and learning about websites.</p>
+</section>
+
+<section id="skills" class="skills-grid">
+<h2>Skills</h2>
+
+<div class="grid-container">
+    <div class="grid-item">HTML</div>
+    <div class="grid-item level">Good</div>
+
+    <div class="grid-item">CSS</div>
+    <div class="grid-item level">Basic</div>
+
+    <div class="grid-item">Python</div>
+    <div class="grid-item level">Basic</div>
+</div>
+
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<ul>
+<li class="project-item">My Portfolio Website</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<form>
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br><br>
+
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email"><br><br>
+
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="4"></textarea><br><br>
+
+<button type="submit">Send</button>
+</form>
+
+</section>
+
+<footer>
+<p>© 2025 Pranay Garg</p>
+</footer>
+
+</body>
+</html>
+
